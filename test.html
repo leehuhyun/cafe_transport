@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카페 및 대중교통 이용</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+
+<body>
+    <h1>카페 및 대중교통 이용</h1>
+    <div id="customer-info">
+        <h2>손님 정보</h2>
+        <label for="customer-name">이름:</label>
+        <input type="text" id="customer-name">
+        <br>
+        <label for="customer-wallet">소지금:</label>
+        <input type="number" id="customer-wallet" min="0" value="0">
+        <button id="save-customer-info">저장</button>
+        <br>
+        <button id="add-credit">소지금 추가</button>
+        <button id="deduct-credit">소지금 차감</button>
+    </div>
+    <div id="cafe">
+        <h2>카페 주문</h2>
+        <label for="coffee-type">커피 종류:</label>
+        <select id="coffee-type">
+            <option value="아메리카노">아메리카노</option>
+            <option value="카페라떼">카페라떼</option>
+            <option value="카페모카">카페모카</option>
+        </select>
+        <br>
+        <label for="coffee-quantity">수량:</label>
+        <input type="number" id="coffee-quantity" min="1" value="1">
+        <button id="coffee-order-button">주문하기</button>
+    </div>
+    <div id="transportation">
+        <h2>대중교통 이용</h2>
+        <label for="transport-type">이용할 교통 수단:</label>
+        <select id="transport-type">
+            <option value="버스">버스</option>
+            <option value="지하철">지하철</option>
+        </select>
+        <br>
+        <label for="transport-cost">요금:</label>
+        <input type="number" id="transport-cost" min="0" value="0">
+        <br>
+        <button id="transport-order-button">교통 이용하기</button>
+    </div>
+    <div id="order-summary">
+        <h2>주문 및 이용 내역</h2>
+        <ul id="order-list">
+        </ul>
+        <h3>손님 정보</h3>
+        <p>이름: <span id="display-customer-name"></span></p>
+        <p>소지금: <span id="display-customer-wallet"></span>원</p>
+    </div>
+    <script src="./js.js"></script>
+</body>
+
+</html>
